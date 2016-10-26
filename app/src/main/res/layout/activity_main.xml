@@ -4,22 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context="com.example.anton.player.MainActivity"
-    android:background="@drawable/背景"
+    android:background="@drawable/bg"
     android:orientation="vertical"
-    android:weightSum="1">
+    android:weightSum="12">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height= "75dp"
-        android:background="@android:color/transparent">
+        android:background="@android:color/transparent"
+        android:layout_weight="1.2">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/logo_left"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/清境logo"
+            android:src="@drawable/logo"
             android:layout_weight="10"
             android:scaleType="fitEnd" />
 
@@ -30,7 +30,7 @@
             android:text="清境大玩家"
             android:id="@+id/name"
             android:layout_gravity="center_vertical"
-            android:textSize="40sp"
+            android:textSize="45sp"
             android:textAlignment="center"
             android:textColor="#5558f4" />
 
@@ -40,166 +40,53 @@
             android:id="@+id/logo_right"
             android:layout_gravity="center_vertical"
             android:layout_weight="10"
-            android:src="@drawable/清境logo"
+            android:src="@drawable/logo"
             android:scaleType="fitStart" />
+
     </LinearLayout>
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:id="@+id/showbox"
-        android:src="@android:color/darker_gray"
-        android:padding="10dp" />
+        android:layout_height="match_parent"
+        android:layout_weight="3.6">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="90dp">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/Transport"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:src="@drawable/交通資訊"
-            android:background="@android:color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/Sights"
-            android:layout_weight="1"
-            android:src="@drawable/公共景點"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent" />
-
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="90dp" >
+        android:layout_height="0dp"
+        android:layout_weight="6">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/Gifts"
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/參觀與伴手禮"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent" />
+            android:id="@+id/left" />
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/middle" />
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/right" />
 
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="90dp" >
+        android:layout_height="match_parent"
+        android:layout_weight="1.2">
 
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/Stay"
-            android:layout_weight="1"
-            android:src="@drawable/民宿飯店"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/Dine"
-            android:layout_weight="1"
-            android:src="@drawable/美食小吃"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="70dp">
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ButtonCall"
-            android:src="@drawable/緊急諮詢電話"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ButtonNews"
-            android:src="@drawable/最新消息"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ButtonMap"
-            android:src="@drawable/線上地圖"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/ButtonMore"
-            android:src="@drawable/更多"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:background="@android:color/transparent" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_weight="0.17">
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="緊急諮詢電話"
-            android:id="@+id/description1"
-            android:gravity="center"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="最新消息"
-            android:id="@+id/description2"
-            android:gravity="center"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="線上地圖"
-            android:id="@+id/description3"
-            android:gravity="center"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="更多"
-            android:id="@+id/description4"
-            android:gravity="center"
-            android:layout_weight="1" />
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </LinearLayout>
